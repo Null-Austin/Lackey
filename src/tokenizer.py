@@ -1,6 +1,7 @@
 # Libaries
 import os
 import json
+import re
 
 # local functions
 def path(path):
@@ -14,16 +15,19 @@ data.close()
 
 # usable functions
 def encode_tokens(s):
-    tokens = []
+    s = str.lower(s) 
+    indices = []
     words = s.split()
+    words = [re.sub(r"[^a-zA-Z0-9]", "", word) for word in words]
     for word in words:
         if word in tokens:
             index = tokens.index(word)
-            tokens.append(index)
-    return tokens
+            indices.append(index)
+    return indices
 
-def decode_tokens(tokens):
+def decode_tokens(token_indices):
     words = []
-    for token in tokens:
+    for token in token_indices:
+        token = int(token)
         words.append(tokens[token])
     return ' '.join(words)
