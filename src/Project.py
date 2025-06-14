@@ -1,0 +1,1 @@
+print('Lackey is cool!')
