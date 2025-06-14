@@ -25,7 +25,7 @@ list = []
 for line in data:
     list.append(line.strip())
 list = json.dumps(list)
-list = f"### token count = {len(data)}\n{list}"
+list = f"{len(data)}\n{list}"
 
 # save transformed data
 newData = open(os.path.join(script_dir,'tokens.txt'),'w',encoding='utf-8')

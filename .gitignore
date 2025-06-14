@@ -2,3 +2,4 @@
 /src/data/*.txt
 /src/test.py
 /src/__pycache__/*
+/src/models*
