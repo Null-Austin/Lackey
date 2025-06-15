@@ -7,3 +7,4 @@
 src/trainingData/*.tsv
 src/trainingData/*.zip
 src/trainingData/*.txt
+src/trainingData/movie/
