@@ -8,4 +8,9 @@ def path(path):
 # Download and prepare data
 subprocess.run(['curl','-o',path('data/english10k.txt'),'https://raw.githubusercontent.com/first20hours/google-10000-english/refs/heads/master/google-10000-english.txt'])
 subprocess.run(['curl','-o',path('data/englishdict.txt'),'https://raw.githubusercontent.com/dwyl/english-words/refs/heads/master/words.txt'])
+subprocess.run(['curl','-o',path('data/englishdict.txt'),'https://raw.githubusercontent.com/dwyl/english-words/refs/heads/master/words.txt'])
 subprocess.run(['python3', path('data/transform-data.py')])
+
+# Download training data
+subprocess.run(['curl','-o',path('trainingData/movie/movie-dialog-corpus.zip'),'https://www.kaggle.com/api/v1/datasets/download/Cornell-University/movie-dialog-corpus'])
+subprocess.run(['unzip','-o',path('trainingData/movie/movie-dialog-corpus.zip'),'-d', path('trainingData/movie/')])

@@ -3,4 +3,7 @@
 /src/test.py
 /src/__pycache__/*
 /src/models*
-/.github/*
+.vscode*
+src/trainingData/*.tsv
+src/trainingData/*.zip
+src/trainingData/*.txt
